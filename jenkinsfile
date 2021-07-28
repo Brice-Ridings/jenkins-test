@@ -6,6 +6,17 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                echo 'Gathering File Configuration'
+                def config = readYaml "./configure_me.yaml"
+                config.xmasFifthDay.callingBirds = "8 Calling Birds"
+                config.frenchHens = "3 French Hens!"
+
+                echo 'Writing new file configuration'
+                sh "rm ./configure_me.yaml"
+                writeYaml file: "./configure_me.yaml", data: config
+
+                echo 'CONFIGURATION FILE'
+                sh "cat ./configure_me.yaml"
             }
         }
         stage('Test') {
