@@ -1,3 +1,9 @@
+## Central repository used for testing auto deployments in Jenkins CI
+
+
+**Website Used for Example**<br>
+https://xanderx.com/post/run-jenkins-script-console-scripts-from-command-line-without-remoting/
+
 
 *Create Function to run cli* 
 ```
@@ -15,6 +21,3 @@ jenkinsCli build "Test Pipeline" -v -s
 ```
 jenkinsCli help build  
 ```
-
-**Website Used for Example**<br>
-https://xanderx.com/post/run-jenkins-script-console-scripts-from-command-line-without-remoting/
