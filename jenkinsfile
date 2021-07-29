@@ -12,6 +12,7 @@ pipeline {
                     config.xmasFifthDay.callingBirds = "8 Calling Birds"
                     config.frenchHens = "3 French Hens!"
                     config.callingBirds[1] = "david"
+                    config.callingBirds[2] = [name: 'key', value: "result"]
 
                     echo 'Writing new file configuration'
                     sh "rm ./configure_me.yaml"
